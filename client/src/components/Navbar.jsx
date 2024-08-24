@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <nav className="flex flex-col md:flex-row justify-between items-center px-6 py-3 gap-3">
+    <nav className="flex flex-col md:flex-row justify-between items-center px-6 py-3 gap-3 mb-10">
       <div>
         <h3 className="text-xl font-bold text-gray-600">
           {new Date().toUTCString().slice(0, 16)}
