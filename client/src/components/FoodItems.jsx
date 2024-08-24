@@ -1,5 +1,11 @@
+import FoodCard from "./FoodCard";
+
 const FoodItems = () => {
-  return <div></div>;
+  return (
+    <div>
+      <FoodCard />
+    </div>
+  );
 };
 
 export default FoodItems;
