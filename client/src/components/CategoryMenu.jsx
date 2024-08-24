@@ -3,11 +3,11 @@ const CategoryMenu = () => {
     <div>
       <h3>Find the best Food</h3>
       <div>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
+        <button>All</button>
+        <button>Lunch</button>
+        <button>Breakfast</button>
+        <button>Dinner</button>
+        <button>Snacks</button>
       </div>
     </div>
   );
