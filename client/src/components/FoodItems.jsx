@@ -10,7 +10,7 @@ const FoodItems = () => {
           id={food.id}
           name={food.name}
           price={food.price}
-          desc={food.rating}
+          desc={food.desc}
           rating={food.rating}
           img={food.img}
         />
