@@ -10,6 +10,14 @@ const FoodCard = () => {
         <h2>Onion Pizza</h2>
         <span>₹180</span>
       </div>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas,
+        magni!
+      </p>
+      <div>
+        <span>Star Icon Rating</span>
+        <button>All to cART</button>
+      </div>
     </div>
   );
 };
