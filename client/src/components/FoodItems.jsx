@@ -12,7 +12,7 @@ const FoodItems = () => {
           price={food.price}
           desc={food.rating}
           rating={food.rating}
-          image={food.img}
+          img={food.img}
         />
       ))}
     </div>
