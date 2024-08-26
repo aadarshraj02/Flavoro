@@ -10,10 +10,10 @@ const Cart = () => {
           <h2 className="text-2xl font-bold text-gray-700">My Orders</h2>
           <IoCloseSharp className="border-2 border-gray-600 text-gray-600 font-bold p-1 text-2xl rounded-md hover:text-red-500 hover:border-red-500 cursor-pointer" />
         </div>
-        <ItemCard/>
+        <ItemCard />
         <div className="absolute bottom-0 ">
-          <h3 className="font-semibold text-gray-700">Items</h3>
-          <h3 className="font-semibold text-gray-700">Total</h3>
+          <h3 className="font-semibold text-gray-700">Items:</h3>
+          <h3 className="font-semibold text-gray-700">Total Amount:</h3>
           <hr className="my-2" />
           <button className="bg-green-500 font-bold px-3 text-white py-2 rounded-lg flex items-center gap-2 mb-5">
             Checkout
