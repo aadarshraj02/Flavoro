@@ -21,7 +21,7 @@ const FoodCard = ({ id, name, price, desc, rating, img }) => {
       </p>
       <div className="flex justify-between items-center">
         <span className="flex gap-1 items-center justify-center">
-          <FaStar className="yellow-400" /> {rating}
+          <FaStar className="text-yellow-400" /> {rating}
         </span>
         <button className="p-1 text-white bg-green-500 hover:bg-green-600 transition-all duration-300 ease-linear flex items-center gap-1 rounded-lg text-sm">
           Add to cart <FaShoppingCart />
