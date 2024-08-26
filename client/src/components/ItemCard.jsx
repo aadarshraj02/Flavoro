@@ -3,7 +3,7 @@ import { HiMinusSm } from "react-icons/hi";
 
 const ItemCard = () => {
   return (
-    <div className="flex gap-2 shadow-md rounded-lg p-2">
+    <div className="flex gap-2 shadow-md rounded-lg p-2 mb-2">
       <img src="" alt="" className="w-[50px] h-[50px]" />
       <div>
         <h2 className="font-bold text-gray-700">Onion Pizza</h2>
