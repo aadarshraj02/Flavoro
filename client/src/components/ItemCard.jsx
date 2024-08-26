@@ -1,9 +1,11 @@
 import { GoPlus } from "react-icons/go";
 import { HiMinusSm } from "react-icons/hi";
+import { MdDelete } from "react-icons/md";
 
 const ItemCard = () => {
   return (
     <div className="flex gap-2 shadow-md rounded-lg p-2 mb-2">
+      <MdDelete className=" text-red-500 hover:text-white hover:bg-red-500 rounded-md p-1 text-2xl transition-all duration-300 ease-linear cursor-pointer font-semibold hover:border-none absolute right-7" />
       <img src="" alt="" className="w-[50px] h-[50px]" />
       <div>
         <h2 className="font-bold text-gray-700">Onion Pizza</h2>
