@@ -1,13 +1,17 @@
 import { GoPlus } from "react-icons/go";
 import { HiMinusSm } from "react-icons/hi";
 import { MdDelete } from "react-icons/md";
+import { useDispatch } from "react-redux";
+import { removeFromCart } from "../redux/slices/CartSlice";
 
 const ItemCard = ({ id, name, qty, price, img }) => {
+  const dispatch = useDispatch();
+
   return (
-    <div className="flex gap-2 shadow-md rounded-lg p-2 mb-2">
+    <div className="flex gap-2 shadow-md rounded-lg p-2 mb-2 relative">
       <MdDelete
-        className=" text-red-500 text-xl cursor-pointer font-semibold absolute right-7
-      "
+        onClick={() => dispatch(removeFromCart({ id }))}
+        className="text-red-500 text-xl cursor-pointer font-semibold absolute right-7"
       />
       <img src={img} alt={name} className="w-[50px] h-[50px]" />
       <div className="leading-5">
