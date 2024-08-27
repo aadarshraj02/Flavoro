@@ -15,7 +15,7 @@ const Cart = () => {
       <div
         className={`fixed right-0 top-0 w-full sm:w-[60vw] md:w-[40vw] lg:w-[25vw] 2xl:w-[20vw] bg-white h-full p-5 ${
           activeCart ? "translate-x-0" : "translate-x-full"
-        }`}
+        } transition-all duration-300 ease-linear z-50`}
       >
         <div className="flex justify-between items-center my-3 ">
           <h2 className="text-2xl font-bold text-gray-700">My Orders</h2>
