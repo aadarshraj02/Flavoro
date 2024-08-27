@@ -1,8 +1,12 @@
 import { IoCloseSharp } from "react-icons/io5";
 import { MdOutlineShoppingCartCheckout } from "react-icons/md";
 import ItemCard from "./ItemCard";
+import { useSelector } from "react-redux";
 
 const Cart = () => {
+  const cartItems = useSelector((state) => state.cart.cart);
+  console.log(cartItems);
+
   return (
     <>
       <div className="fixed right-0 top-0 w-full sm:w-[60vw] md:w-[40vw] lg:w-[25vw] 2xl:w-[20vw] bg-white h-full p-5">
@@ -10,11 +14,6 @@ const Cart = () => {
           <h2 className="text-2xl font-bold text-gray-700">My Orders</h2>
           <IoCloseSharp className="border-2 border-gray-600 text-gray-600 font-bold p-1 text-2xl rounded-md hover:text-red-500 hover:border-red-500 cursor-pointer" />
         </div>
-        <ItemCard />
-        <ItemCard />
-        <ItemCard />
-        <ItemCard />
-        <ItemCard />
         <ItemCard />
         <div className="absolute bottom-0 ">
           <h3 className="font-semibold text-gray-700">Items:</h3>
