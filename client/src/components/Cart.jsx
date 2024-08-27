@@ -35,6 +35,10 @@ const Cart = () => {
           </button>
         </div>
       </div>
+      <MdOutlineShoppingCartCheckout
+        onClick={() => setActiveCart(!activeCart)}
+        className="rounded-full bg-white shadow-md text-5xl p-3 fixed bottom-4 right-4 cursor-pointer"
+      />
     </>
   );
 };
