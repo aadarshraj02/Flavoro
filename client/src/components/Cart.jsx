@@ -24,16 +24,22 @@ const Cart = () => {
             className="border-2 border-gray-600 text-gray-600 font-bold p-1 text-2xl rounded-md hover:text-red-500 hover:border-red-500 cursor-pointer"
           />
         </div>
-        {cartItems.map((food) => (
-          <ItemCard
-            key={food.id}
-            id={food.id}
-            name={food.name}
-            price={food.price}
-            img={food.img}
-            qty={food.qty}
-          />
-        ))}
+        {cartItems.length > 0 ? (
+          cartItems.map((food) => (
+            <ItemCard
+              key={food.id}
+              id={food.id}
+              name={food.name}
+              price={food.price}
+              img={food.img}
+              qty={food.qty}
+            />
+          ))
+        ) : (
+          <h2 className="text-center text-2xl font-bold text-gray-700">
+            Your Cart is empty
+          </h2>
+        )}
         <div className="absolute bottom-0 ">
           <h3 className="font-semibold text-gray-700">Items:</h3>
           <h3 className="font-semibold text-gray-700">Total Amount:</h3>
