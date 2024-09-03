@@ -10,7 +10,7 @@ const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cart);
   const totalQty = cartItems.reduce((totalQty, item) => totalQty + item.qty, 0);
   const totalPrice = cartItems.reduce(
-    (total, item) => total + item.qty * item,
+    (total, item) => total + item.qty * item.price,
     0
   );
 
@@ -46,7 +46,9 @@ const Cart = () => {
         )}
         <div className="absolute bottom-0 ">
           <h3 className="font-semibold text-gray-700">Items:{totalQty}</h3>
-          <h3 className="font-semibold text-gray-700">Total Amount:</h3>
+          <h3 className="font-semibold text-gray-700">
+            Total Amount:{totalPrice}
+          </h3>
           <hr className="my-2" />
           <button className="bg-green-500 font-bold px-3 text-white py-2 rounded-lg flex items-center gap-2 mb-5">
             Checkout
