@@ -8,7 +8,7 @@ const Cart = () => {
   const [activeCart, setActiveCart] = useState(true);
 
   const cartItems = useSelector((state) => state.cart.cart);
-  console.log(cartItems);
+  const totalQty = cartItems.reduce((totalQty, item) => totalQty + item.qty, 0);
 
   return (
     <>
@@ -52,7 +52,7 @@ const Cart = () => {
       </div>
       <MdOutlineShoppingCartCheckout
         onClick={() => setActiveCart(!activeCart)}
-        className="rounded-full bg-white shadow-md text-5xl p-3 fixed bottom-4 right-4 cursor-pointer"
+        className={`rounded-full bg-white shadow-md text-5xl p-3 fixed bottom-4 right-4 cursor-pointer `}
       />
     </>
   );
