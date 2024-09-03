@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/slices/CartSlice";
 
-const FoodCard = ({ id, name, price, desc, rating, img }) => {
+const FoodCard = ({ id, name, price, desc, rating, img, handleToast }) => {
   const description = typeof desc === "string" ? desc : "";
 
   const dispatch = useDispatch();
@@ -19,6 +19,7 @@ const FoodCard = ({ id, name, price, desc, rating, img }) => {
         qty: 1,
       })
     );
+    handleToast();
   };
 
   return (
