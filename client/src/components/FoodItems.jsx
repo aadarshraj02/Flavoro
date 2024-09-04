@@ -18,9 +18,12 @@ const FoodItems = () => {
         {foodData
           .filter((food) => {
             if (category === "All") {
-              return food;
+              return food.name.toLowerCase().includes(search.toLowerCase());
             } else {
-              return category === food.category;
+              return (
+                category === food.category &&
+                food.name.toLowerCase().includes(search.toLowerCase())
+              );
             }
           })
           .map((food) => (
