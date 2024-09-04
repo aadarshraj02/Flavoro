@@ -3,6 +3,7 @@ import { MdOutlineShoppingCartCheckout } from "react-icons/md";
 import ItemCard from "./ItemCard";
 import { useSelector } from "react-redux";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const [activeCart, setActiveCart] = useState(false);
@@ -13,6 +14,7 @@ const Cart = () => {
     (total, item) => total + item.qty * item.price,
     0
   );
+  const navigate = useNavigate();
 
   return (
     <>
@@ -50,7 +52,12 @@ const Cart = () => {
             Total Amount:{totalPrice}
           </h3>
           <hr className="my-2" />
-          <button className="bg-green-500 font-bold px-3 text-white py-2 rounded-lg flex items-center gap-2 mb-5">
+          <button
+            onClick={() => {
+              navigate("/success");
+            }}
+            className="bg-green-500 font-bold px-3 text-white py-2 rounded-lg flex items-center gap-2 mb-5"
+          >
             Checkout
             <MdOutlineShoppingCartCheckout className="text-xl font-bold" />{" "}
           </button>
