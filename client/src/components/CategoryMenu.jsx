@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FoodData from "../data/foodData";
 
 const CategoryMenu = () => {
-  const [category, setCategory] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   const listUniqueCategories = () => {
-    const uniqueCategories = [Set(FoodData.map((food) => food.category))];
-    setCategory(uniqueCategories);
+    const uniqueCategories = [
+      ...new Set(FoodData.map((food) => food.category)),
+    ];
+    setCategories(uniqueCategories);
   };
+
+  useEffect(() => {
+    listUniqueCategories();
+  }, []);
 
   return (
     <div className="ml-6">
