@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 
 const FoodItems = () => {
   const category = useSelector((state) => state.category.category);
+  const search = useSelector((state) => state.search.search);
 
   const handleToast = () => {
     toast.success("Item added to cart");
