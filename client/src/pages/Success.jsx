@@ -15,7 +15,9 @@ const Success = () => {
         <PropagateLoader />
       ) : (
         <div>
-          <h2 className="text-3xl font-semibold mb-4 ">Order Successful!!</h2>
+          <h2 className="text-3xl font-semibold mb-4 text-center">
+            Order Successful!!
+          </h2>
           <p>Your Order has been placed Successfully</p>
         </div>
       )}
