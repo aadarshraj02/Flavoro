@@ -1,4 +1,14 @@
+import { useState } from "react";
+import FoodData from "../data/foodData";
+
 const CategoryMenu = () => {
+  const [category, setCategory] = useState([]);
+
+  const listUniqueCategories = () => {
+    const uniqueCategories = [Set(FoodData.map((food) => food.category))];
+    setCategory(uniqueCategories);
+  };
+
   return (
     <div className="ml-6">
       <h3 className="text-xl font-semibold">Find the best Food</h3>
