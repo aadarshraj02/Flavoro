@@ -75,3 +75,17 @@ const login = async (req, res) => {
     });
   }
 };
+
+const logout = async (req, res) => {
+  try {
+    res.clearCookie("token").json({
+      success: true,
+      message: "Logout Successful",
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
