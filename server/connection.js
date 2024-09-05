@@ -8,4 +8,4 @@ const connectDb = async () => {
     return error.message;
   }
 };
-MediaSourceHandle.exports = { connectDb };
+module.exports = { connectDb };
